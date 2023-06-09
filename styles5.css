@@ -1,0 +1,233 @@
+html {
+    font-size: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    scroll-behavior: smooth;
+    color: #424242;
+}
+* {box-sizing: border-box;} /*cu asta limitam paddingul si altele sa nu depaseasca si sa nu ocupe mai mult spatiu decat ii dat width si height*/
+h1, h2, h3 {
+  display: block;   
+  font-weight: 700;
+  color: #caa880;  
+}
+h1 {  
+    margin: 1rem 0rem;
+    font-size: 4.8rem; 
+}
+h2 { 
+    margin: 1rem 0rem;
+    font-size: 3.6rem; 
+}
+h3 {
+    font-size: 2.4rem; 
+}
+p {
+    font-size: 1.5rem;
+    color: #606060;
+    line-height: 2rem;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/*---------------------------------------------------------------------*/
+/* NAVIGATION */
+/*---------------------------------------------------------------------*/
+header {
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+}
+
+.logo > img {width: 6rem; height: 6rem;}
+
+.navigation {
+    display: inline-block;
+    text-align: center;
+}
+
+.navigation > a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #424242;
+    text-decoration: none;
+}
+
+.navigation > a::after {
+    display: flex;
+    justify-content: center;
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: #caa880;
+    transition: transform 0.3s ease-out;
+}
+.underlined {
+    display: inline-block;
+    content: "";
+    position: relative;
+}
+
+.navigation > a:hover:after {
+    transform: scaleX(1);
+ }
+
+.navigation > a:last-child {margin-right: 0rem;}
+
+.navigation > a:hover {
+    cursor: pointer;
+}
+
+.navigation > a:active {
+    text-decoration: underline #caa880;
+    font-weight: 700;
+}
+
+@media (max-width:500px) {
+    header {
+      padding: 0.75rem 0.5rem;
+    }
+  
+    .navigation>a {
+      margin-right: 0;
+    }
+  
+    .logo {
+      width: 5rem;
+    }
+  }
+
+/*---------------------------------------------------------------------*/
+/* HERO */
+/*---------------------------------------------------------------------*/
+.video-details {
+    width: 100%;
+}
+
+/*---------------------------------------------------------------------*/
+/* SECTION ABOUT */
+/*---------------------------------------------------------------------*/
+.sec-ab-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5rem;
+}
+.sec-ab-desc {
+    padding-right: 3rem;
+}
+.sec-ab-desc p {
+    text-align: justify;
+    margin-top: 3rem;
+}
+.sec-ab-desc ul {
+    margin-top: 2rem;
+}
+.sec-ab-desc li {
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.sec-ab-desc li i {
+    font-size: 2rem; 
+    color: #caa880; 
+}
+.sec-ab-desc li span { 
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: #606060;
+    line-height: 2rem;
+}
+.sec-ab-img img {
+    border-radius: 1.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/*---------------------------------------------------------------------*/
+/* SECTION SERVICES*/
+/*---------------------------------------------------------------------*/
+.sec-serv-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec-serv-item {
+    padding: 5rem;
+    text-align: center;
+}
+.sec-services h2 {
+    text-align: center;
+    margin: 5rem 0 7rem;
+}
+.sec-serv-item p {
+    text-align: justify;
+    margin: 1.5rem 0 3rem;
+}
+.sec-serv-item img {
+    height: 10rem;
+}
+
+/*---------------------------------------------------------------------*/
+/* SECTION IMAGE*/
+/*---------------------------------------------------------------------*/
+#counter {
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(images/dentist-model.jpeg); 
+    background-position:center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+.sec-count-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec-count-item i {
+    font-size: 5rem; 
+    color: #caa880; 
+}
+.sec-count-item {
+    text-align: center;
+    padding: 5rem;
+}
+
+/*---------------------------------------------------------------------*/
+/* SECTION FOOTER*/
+/*---------------------------------------------------------------------*/
+.footer-info {
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+.footer-info h3{
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+}
+.info-item {
+    display: flex;
+    margin-top: 1rem;
+}
+.info-item a {
+    font-size: 1.5rem;
+    color: #606060;
+    line-height: 2rem;
+    text-decoration: none; 
+}
+.info-item i {
+    font-size: 2rem; 
+    color: #caa880;
+    padding-right: 2rem;
+}
+address {
+    font-size: 1.5rem;
+    color: #606060;
+    line-height: 2rem;
+}
